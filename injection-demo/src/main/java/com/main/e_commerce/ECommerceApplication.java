@@ -17,3 +17,9 @@ public class ECommerceApplication {
 	}
 
 }
+
+// ./mvnw spring-boot:run => to run the application or ./mvnw spring-boot:run
+
+// ./gradlew bootRun
+
+
