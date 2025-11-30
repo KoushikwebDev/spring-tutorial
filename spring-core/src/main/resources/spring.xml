@@ -27,3 +27,7 @@
     </bean>
 
 </beans>
+
+
+<!--here when we are using the property then we need the getter and setter in the Dev class-->
+<!--here when we are using the constructor-arg then we need the constructor in the Dev class -->

@@ -27,7 +27,7 @@ public class App
 
 // in the xml file create bean for the every object to be in the container
 
-// but when you have to use the obj in different class, like Dev need Laptop, we can get it by @Autowire in spring-boot, but here manually we have to do it. for that we are using spring.xml file
+// but when you have to use the obj in different class, like Dev need Laptop, we can get it by setting ref in xml file.
 
 // by the property we can set the value but for this we need the getter and setter method declared
 
