@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data // it will create getter and setter for this class, by the lombok
 @AllArgsConstructor // it will create constructor for this class, by the lombok
 @NoArgsConstructor // This will create a default constructor for JPA
-@Entity
+@Entity // to make this class as entity for JPA
 public class Product {
 
     @Id
