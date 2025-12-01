@@ -1,9 +1,14 @@
+
+
 package com.koushik.simpleWebApp.service;
 
 import com.koushik.simpleWebApp.model.Product;
+import com.koushik.simpleWebApp.repository.ProductRepo;
 import lombok.Getter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,32 +17,29 @@ import java.util.List;
 @Service
 public class ProductService {
 
-    public List<Product> products = Arrays.asList(
-            new Product(1,"New Product", 1099),
-            new Product(2,"New Product 2", 1088)
-    );
+    @Autowired
+    ProductRepo repo;
 
     public List<Product> getProducts(){
-    return products;
+        return repo.findAll();
     }
 
     public Product getProductById(int prodId) {
-        return products.stream()
-                .filter(p -> p.getProdId() == prodId)
-                .findFirst()
-                .orElse(null);
+        return repo.findById(prodId).orElse(null);
     }
 
 
-//    public Product getProductById(int prodId) {
-//        for(Product p : products) {
-//            if(p.getProdId() == prodId) {
-//                return p;
-//            }
-//        }
-//        return null; // not found
-//    }
+
+    public void addProduct(Product prod){
+        repo.save(prod);
+    }
+
+    public void updateProduct(Product product){
+        repo.save(product);
+    }
 
 
-
+    public void deleteProduct(int prodId) {
+        repo.deleteById(prodId);
+    }
 }
