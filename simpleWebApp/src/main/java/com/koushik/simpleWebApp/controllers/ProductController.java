@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 public class ProductController {
 
-    @Autowired
+    @Autowired // Injects the ProductService dependency
     private ProductService service;
 
     @RequestMapping("/products")
