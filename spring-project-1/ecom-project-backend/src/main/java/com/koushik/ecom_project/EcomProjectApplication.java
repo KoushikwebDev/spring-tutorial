@@ -11,3 +11,8 @@ public class EcomProjectApplication {
 	}
 
 }
+
+//* @SpringBootApplication it handles @Configuration, @EnableAutoConfiguration, @ComponentScan
+// AutoConfiguration like db connection and other things
+// ComponentScan like to create bin from a class and manage its life cycle
+// Configuration to define extra beans or custom beans if needed
