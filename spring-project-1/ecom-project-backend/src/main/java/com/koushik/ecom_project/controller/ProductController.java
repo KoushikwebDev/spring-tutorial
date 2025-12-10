@@ -122,3 +122,7 @@ public class ProductController {
 //    return new ResponseEntity<>(response, HttpStatus.OK);
 //}
 
+//? Build the project : ./mvnw package
+//? Run the .jar file : ./target/ecom-project-0.0.1-SNAPSHOT.jar;
+//? Delete target folder : ./mvnw clean
+
